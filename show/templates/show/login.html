@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div style="text-align:center;margin-right:auto;margin-left:auto">
+<h1>临时工资查询系统</h1>
+<h3>首次登陆后需重置密码</h3>
+<form action="." method="post">
+	{% csrf_token %}
+	工号：{{ form.staffnum}}
+	密码：{{form.password}}
+	<input type="submit" name="" value="提交">
+</form>
+</div>
+</body>
+</html>

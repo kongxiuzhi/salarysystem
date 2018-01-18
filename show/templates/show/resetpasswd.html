@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="." method="post">
+	<div style="text-align:center">
+	{% csrf_token %}
+	<table style="margin:auto">
+	<tr>
+		<td>原秘密：</td>
+		<td>{{form.password}}</td>
+	</tr>
+	<tr>
+		<td>新密码：</td>
+		<td>{{form.password1}}</td>
+	</tr>
+	<tr>
+		<td>请确认：</td>
+		<td>{{form.password2}}</td>
+	</tr>
+	<tr>
+		<td colspan="2" ><button type="submit" style="margin:auto">提交</button><td>
+	</tr>
+	</table>
+	</div>
+</form>
+</body>
+</html>

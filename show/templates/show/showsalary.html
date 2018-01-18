@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<div style="text-align:center">
+<a href="{% url "logout" %}">注销</a>
+{{request.session.staffnum}}
+<a href="{% url "resetpassword" request.session.staffnum %}">重置密码</a>
+</div>
+<h1> {{ date}}份工资条</h1>
+<table>
+	{% if salary.gwgz != 0 %}
+	<tr>
+		<td>岗位工资</td>
+		<td>{{salary.gwgz}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.zjjt != 0 %}
+	<tr>
+		<td>职级津贴</td>
+		<td>{{salary.zjjt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.zwjt != 0 %}
+	<tr>
+		<td>职务津贴</td>
+		<td>{{salary.zwjt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.blgz != 0 %}
+	<tr>
+		<td>保留工资</td>
+		<td>{{salary.blgz}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.nggz != 0 %}
+	<tr>
+		<td>年工工资</td>
+		<td>{{salary.nggz}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.dqlcjt != 0 %}
+	<tr>
+		<td>地区留才津贴</td>
+		<td>{{salary.dqlcjt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.wpjt != 0 %}
+	<tr>
+		<td>外派津贴</td>
+		<td>{{salary.wpjt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.tgjt != 0 %}
+	<tr>
+		<td>特岗津贴</td>
+		<td>{{salary.tgjt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.gwgt != 0 %}
+	<tr>
+		<td>岗位津贴</td>
+		<td>{{salary.gwgt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.yjgz1 != 0 %}
+	<tr>
+		<td>业绩工资1(OT)</td>
+		<td>{{salary.yjgz1}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.yjgz2 != 0 %}
+	<tr>
+		<td>业绩工资2(OT)</td>
+		<td>{{salary.yjgz2}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.jbf != 0 %}
+	<tr>
+		<td>加班费</td>
+		<td>{{salary.jbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.cybjt != 0 %}
+	<tr>
+		<td>长夜班津贴</td>
+		<td>{{salary.cybjt}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.cdztkk != 0 %}
+	<tr>
+		<td>迟到早退扣款</td>
+		<td>{{salary.cdztkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.kgkk != 0 %}
+	<tr>
+		<td>旷工扣款</td>
+		<td>{{salary.kgkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.bjkk != 0 %}
+	<tr>
+		<td>病假扣款</td>
+		<td>{{salary.bjkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.sjkk != 0 %}
+	<tr>
+		<td>事假扣款</td>
+		<td>{{salary.sjkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.zjljlj != 0 %}
+	<tr>
+		<td>总经理激励金</td>
+		<td>{{salary.zjljlj}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.xmjlj != 0 %}
+	<tr>
+		<td>项目激励金</td>
+		<td>{{salary.xmjlj}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.jhhj != 0 %}
+	<tr>
+		<td>结婚贺金</td>
+		<td>{{salary.jhhj}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.tabc != 0 %}
+	<tr>
+		<td>提案报酬</td>
+		<td>{{salary.tabc}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.bjf != 0 %}
+	<tr>
+		<td>褒奖费</td>
+		<td>{{salary.bjf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.sqbf != 0 %}
+	<tr>
+		<td>税前补发</td>
+		<td>{{salary.sqbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.sqkk != 0 %}
+	<tr>
+		<td>税前扣款</td>
+		<td>{{salary.sqkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.yfgz != 0 %}
+	<tr>
+		<td>应发工资</td>
+		<td>{{salary.yfgz}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.yanglbxgr != 0 %}
+	<tr>
+		<td>养老保险个人</td>
+		<td>{{salary.yanglbxgr}}</td>
+	</tr>
+	{% endif %}
+	{% if salary.sybxge != 0 %}
+	<tr>
+		<td>失业保险个人</td>
+		<td>{{salary.sybxge}}</td>
+	</tr>
+	{% endif %}
+	{% if salary.yilbxgr != 0 %}
+	<tr>
+		<td>医疗保险个人</td>
+		<td>{{salary.yilbxgr}}</td>
+	</tr>
+	{% endif %}
+	{% if salary.zfgjjgr != 0 %}
+	<tr>
+		<td>住房公积金个人</td>
+		<td>{{salary.zfgjjgr}}</td>
+	</tr>
+	{% endif %}
+	{% if salary.qynjgrjfsqkk != 0 %}
+	<tr>
+		<td>企业年金个人缴费税前扣款</td>
+		<td>{{salary.qynjgrjfsqkk}}</td>
+	</tr>
+	{% endif %}
+	{% if salary.qynjgrjfsqbk != 0 %}
+	<tr>
+		<td>企业年金个人缴费税前补缴</td>
+		<td>{{salary.qynjgrjfsqbk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.shbf != 0 %}
+	<tr>
+		<td>工资薪资个人所得税</td>
+		<td>{{salary.shbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.shbf != 0 %}
+	<tr>
+		<td>独生子女费</td>
+		<td>{{salary.shbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.shbf != 0 %}
+	<tr>
+		<td>餐费扣款</td>
+		<td>{{salary.shbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.shbf != 0 %}
+	<tr>
+		<td>集体房租</td>
+		<td>{{salary.shbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.qynjgrjfshkk != 0 %}
+	<tr>
+		<td>企业年金个人缴费税后扣款</td>
+		<td>{{salary.qynjgrjfshkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.ynjgrjfshbk != 0 %}
+	<tr>
+		<td>企业年金个人缴费税后补缴</td>
+		<td>{{salary.qynjgrjfshbk}}</td>
+	</tr>
+	{% endif %}
+	{% if salary.shbf != 0 %}
+	<tr>
+		<td>税后补发</td>
+		<td>{{salary.shbf}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.shkk != 0 %}
+	<tr>
+		<td>税后扣款</td>
+		<td>{{salary.shkk}}</td>
+	</tr>
+	{% endif %}
+		{% if salary.sfgz != 0 %}
+	<tr>
+		<td>实发工资</td>
+		<td>{{salary.sfgz}}</td>
+	</tr>
+	{% endif %}
+</table>
+</body>
+</html>

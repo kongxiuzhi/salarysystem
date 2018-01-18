@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homepage</title>
+</head>
+<body>
+<div style="text-align:center">
+<a href="{% url "logout" %}">注销</a>
+{{staffnum}}
+<a href="{% url "resetpassword" request.session.staffnum %}">重置密码</a>
+</div>
+<div style="text-align:center">
+	<h2>要查询的工资时间</h2>
+	<form method="post" action="{% url "showSalary"%}">	
+		<p>年：{{ form.year}}</p>
+		<p>月：{{ form.month}}</p>
+		{% csrf_token %}
+		<p><input type="submit" name="" value="查询"></p>
+	</form>
+</div>
+</body>
+</html>
